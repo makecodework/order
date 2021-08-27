@@ -1,0 +1,27 @@
+.nav-top {
+  width: 100%;
+  margin-right: 40px;
+}
+.nav-footer {
+  width: 470px;
+}
+nav{
+  ul {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+    li{
+      display: block;
+    }
+    a {
+      @include rem(18);
+      font-weight: 500;
+      color: $main_color__text;
+      &:hover {
+        color: $main_color__blue;
+      }
+    }
+  }
+}

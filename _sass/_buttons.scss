@@ -1,0 +1,26 @@
+.callme{
+  border: 1px solid $main_color__blue;
+  @include rounded(50px);
+  font-weight: 600;
+  line-height: 20px;
+  text-align: center;
+  width: 70%;
+  padding: 15px 0;
+  a {
+    display: block;
+    color: $main_color__blue;
+    text-decoration: none;
+    @include rem(16);
+    font-weight: 600;
+    text-transform: uppercase;
+
+  }
+}
+.colored {
+  background-color: $main_color__blue;
+  width: 40%;
+  a{
+    color: $invert_color__link;
+  }
+
+}
