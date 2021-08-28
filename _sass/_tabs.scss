@@ -2,9 +2,8 @@
   display: grid;
   grid-template-columns: 500px repeat(1, 1fr);
   grid-column-gap: 60px;
-
+  margin-top: 50px;
 }
-
 .tabs {
   display: flex;
   flex-direction: column;
@@ -41,7 +40,6 @@
 .tabs-panel {
   display: none;
 }
-
 .tabs-panel.active {
   display: block;
   h3 {

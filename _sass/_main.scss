@@ -45,3 +45,10 @@ h3,h4{
   width: 100%;
   margin: 0 auto;
 }
+section {
+  margin-bottom: 170px;
+  h2 {
+    @include rem(90);
+    font-weight: 500;
+  }
+}

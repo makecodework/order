@@ -1,3 +1,4 @@
+console.log('test');
 const tabLinks = document.querySelectorAll(".tabs a");
 const tabPanels = document.querySelectorAll(".tabs-panel");
 
