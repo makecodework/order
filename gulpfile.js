@@ -22,7 +22,7 @@ const browserSync = require('browser-sync').create();
 
 const files = {
     scssPath: '_sass/**/*.scss',
-    cssPath: 'assets/css/**/*.scss',
+    cssPath: 'assets/',
     jsPath: 'assets/js/main.js',
     imgPath: 'assets/img/**/*',
     fontPath: 'assets/fonts/**/*',
@@ -36,7 +36,7 @@ function scssTask(){
         .pipe(sass().on('error', sass.logError))
         .pipe(postcss([ autoprefixer(),cssnano() ]))
         .pipe(sourcemaps.write('.')) // write sourcemaps file in current directory
-        .pipe(dest('_site/assets/css/')) // put final CSS in dist folder
+        .pipe(dest(files.cssPath)) // put final CSS in dist folder
         .pipe(browserSync.reload({stream:true}))
 }
 
