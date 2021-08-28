@@ -7,6 +7,7 @@
 .tabs {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   background-color: $footer_color__background;
   @include rounded(10px);
 
@@ -24,11 +25,15 @@
   border-radius: 2px 2px 0 0;
   opacity: 0.7;
   transition: all 0.1s ease-in-out;
+  color: $main_color__text;
 }
-
+.tabs li.active a {
+  font-weight: 500;
+}
 .tabs li.active a,
 .tabs li a:hover {
   opacity: 1;
+  color: $main_color__blue;
 
 }
 
