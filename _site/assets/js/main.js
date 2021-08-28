@@ -1,4 +1,20 @@
-console.log('test');
+function initMap(){
+  // The location of Uluru
+    const uluru = { lat: 39.7219538, lng: -91.5098444 };
+    // The map, centered at Uluru
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 4,
+      center: uluru,
+    });
+    // The marker, positioned at Uluru
+    const iconFolder = 'assets/img/';
+    const marker = new google.maps.Marker({
+      position: uluru,
+      map: map,
+      icon: `${iconFolder}location.svg`,
+    });
+
+}
 const tabLinks = document.querySelectorAll(".tabs a");
 const tabPanels = document.querySelectorAll(".tabs-panel");
 
