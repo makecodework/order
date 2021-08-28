@@ -1,0 +1,31 @@
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+  body {
+    background-color: blue;
+  }
+  .wrapper{
+    padding: 0 15px;
+  }
+  .promo_block .promo_text h1 {
+    @include rem(40)
+  }
+  .promo_block .promo_text p {
+    @include rem(19)
+  }
+  .colored {
+    width: 50%;
+  }
+  .blocks .block p {
+    @include rem(14);
+    &:before {
+      left: -16% !important;
+    }
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  body {
+    background-color: olive;
+  }
+}
