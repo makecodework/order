@@ -52,6 +52,12 @@ section {
     font-weight: 500;
   }
 }
+.page_section{
+  margin-top: 80px;
+  h2 {
+    @include rem(70);
+  }
+}
 #map{
   height: 100%;
 }

@@ -10,9 +10,12 @@
   justify-content: center;
   background-color: $footer_color__background;
   @include rounded(10px);
+  height: 340px;
+  /* padding-top: 51px;
+  padding-left: 34px;
+  padding-bottom: 59px; */
 
 }
-
 .tabs li:not(:last-child) {
   margin-right: 7px;
 }
@@ -26,6 +29,8 @@
   opacity: 0.7;
   transition: all 0.1s ease-in-out;
   color: $main_color__text;
+  @include rem(24);
+  line-height: 38px;
 }
 .tabs li.active a {
   font-weight: 500;
@@ -56,7 +61,8 @@
 }
 .tabs-panel.active {
   display: block;
-  animation: scale 0.7s ease-in-out; 
+  animation: scale 0.7s ease-in-out;
+
   h3 {
     color: $main_color__text;
     @include rem(40);
@@ -64,7 +70,7 @@
   }
   p {
     @include rem(18);
-    line-height: 28px;
+    line-height: 38px;
     margin-top: 30px;
   }
 }
