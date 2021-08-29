@@ -1,7 +1,7 @@
 <nav class="{{ include.navclass }}">
   <ul>
-    <li><a href="{{ site.baseurl }}/services.html">Сервисы</a></li>
-    <li><a href="{{ site.baseurl }}/clients.html">Наши клиенты</a></li>
-    <li><a href="{{ site.baseurl }}/about.html">О нас</a></li>
+    <li><a href="{{ site.baseurl }}/services.html" class="{% if page.url=='/services.html'%}current {%  endif %}">Сервисы</a></li>
+    <li><a href="{{ site.baseurl }}/clients.html" class="{% if page.url=='/clients.html'%}current {%endif %}">Наши клиенты</a></li>
+    <li><a href="{{ site.baseurl }}/about.html" class="{% if page.url=='/about.html'%}current {%endif %}">О нас</a></li>
   </ul>
 </nav>
