@@ -1,0 +1,129 @@
+.page_section{
+  h2{
+    margin-bottom: 50px;
+  }
+}
+.about_block{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  .img_block{
+    justify-content: center;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex: 2 1 60%;
+    margin-right: 50px;
+
+  }
+  aside {
+    flex: 2 2 30%;
+    .block{
+      background-color: $block_color__background;
+      @include rounded(10px);
+      display:grid;
+      align-items: center;
+
+      height: 246px;
+      margin-bottom: 20px;
+      p{
+        @include rem(24);
+        font-weight: 400;
+        line-height: 37px;
+        padding: 0 34px;
+
+        &:before{
+          content: '';
+          border: 2px solid;
+          position: relative;
+          left: -34px;
+          border-radius: 10px;
+          color: $main_color__blue;
+        }
+      }
+    }
+
+  }
+
+}
+.questions_block
+{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  margin-top: 130px;
+  .question,
+  .contact_block {
+    h3{
+      @include rem(70);
+      font-weight: 500;
+      margin-bottom: 50px;
+    }
+  }
+  .question{
+    flex: 2 1 60%;
+    margin-right: 50px;
+
+    .question_contet {
+      margin-bottom: 70px;
+
+      h4 {
+        @include rem(40);
+        color: $main_color__text;
+        line-height: 60px;
+        font-weight: 500;
+        margin-bottom: 30px;
+      }
+      p {
+        @include rem(18);
+        line-height: 28px;
+      }
+    }
+
+  }
+  .contact_block {
+    flex: 1 2 30%;
+
+    .block{
+      background-color: $block_color__background;
+      @include rounded(10px);
+      margin-bottom: 10px;
+      padding: 0 34px;
+      width: 100%;
+      height: 275px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      &:last-child {
+        margin: 0;
+      }
+      p,a{
+        @include rem(18);
+        font-weight: 400;
+        line-height: 35px;
+        margin-bottom: 24px;
+        &:last-child{
+          margin: 0;
+        }
+      }
+      a {
+        color: $main_color__blue;
+        &:visited{
+          color: $main_color__blue;
+        }
+        &.contact_phone{
+          font-weight: 500;
+        }
+      }
+
+    }
+  }
+ .form_block{
+   h3{
+     @include rem(40);
+     font-weight: 500;
+     line-height: 49px;
+     margin-bottom: 50px;
+   }
+ }
+}

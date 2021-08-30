@@ -61,3 +61,28 @@ section {
 #map{
   height: 100%;
 }
+input[type="text"],
+input[type="email"],
+textarea {
+  display: block;
+  @include rounded(6px);
+  border: 1px solid #879198;
+  margin-bottom: 24px;
+  padding: 16px 10px;
+  width: 398px;
+}
+input[type="submit"]{
+  display: block;
+  border-radius: 50px;
+  border: none;
+  background-color: $main_color__blue;
+  font-weight: 600;
+  width: 197px;
+  height: 52px;
+  color: $white_color;
+  @include rem(16);
+  line-height: 20px;
+  text-transform: uppercase;
+  margin-top: 30px;
+
+}
