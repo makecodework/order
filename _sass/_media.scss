@@ -56,7 +56,7 @@
       grid-template-columns: repeat(3,1fr);
     }
     .clients{
-      grid-template-columns: repeat(4,1fr) !important;
+      grid-template-columns: repeat(3,1fr) !important;
     }
   }
   .tabs_block {
@@ -124,5 +124,58 @@
   .map_block {
     border: 1px solid red;
     margin-left: 0;
+  }
+  section .service_block {
+    grid-template-columns: repeat(1,1fr);
+  }
+  .colored {
+    margin: 0 auto;
+  }
+  .clients_block {
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap: 40px;
+  }
+  .page_section h2 {
+    @include rem(50);
+  }
+  .testimonials_block {
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+    section h2 {
+      @include rem(70);
+    }
+    .technology_block h3 {
+      @include rem(35);
+    }
+    .promo_block {
+      grid-template-columns: repeat(1,1fr);
+      .promo_text{
+        order: 2;
+      }
+    }
+    .blocks {
+      grid-template-columns: repeat(2,1fr);
+      .block p{
+        &::before{
+          left: -35px !important;
+        }
+
+      }
+    }
+    .technology_block .technologies {
+      grid-template-columns: repeat(2,1fr);
+  }
+  .tabs-panel.active h3 {
+    @include rem(35);
+  }
+  .technology_block .clients {
+    grid-template-columns: repeat(3,1fr) !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  .promo_block .promo_text h1 {
+    @include rem(30);
   }
 }
