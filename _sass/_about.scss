@@ -27,7 +27,7 @@
       height: 246px;
       margin-bottom: 20px;
       p{
-        @include rem(24);
+        @include rem(20);
         font-weight: 400;
         line-height: 37px;
         padding: 0 34px;
@@ -98,12 +98,22 @@
         margin: 0;
       }
       p,a{
-        @include rem(18);
+        @include rem(24);
         font-weight: 400;
         line-height: 35px;
         margin-bottom: 24px;
         &:last-child{
           margin: 0;
+        }
+      }
+      p{
+        &:before{
+          content: '';
+          border: 2px solid;
+          position: relative;
+          left: -34px;
+          border-radius: 10px;
+          color: $main_color__blue;
         }
       }
       a {
@@ -113,11 +123,11 @@
         }
         &.contact_phone{
           font-weight: 500;
+          @include rem(32);
         }
       }
 
     }
   }
 
-}
 }
