@@ -267,6 +267,9 @@
     .technology_block .clients {
       grid-template-columns: repeat(3,1fr);
     }
+    .nav-footer {
+      width: auto;
+    }
 }
 @media screen and (max-width: 480px) {
   section {
