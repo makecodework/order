@@ -5,55 +5,30 @@ title: About
 <section class='page_section'>
   <h2>О нас</h2>
   <div class="about_block">
-
     <div class="img_block">
       <img src="{{ site.baseurl }}/assets/img/about1.svg" alt="about">
     </div>
     <aside class="about_blocks">
-      <div class="block"><p>Запустили собственные стартапы и нам нравится делиться опытом с нашыми клиентами</p></div>
-      <div class="block"><p>Нам нравится работать с сетями, оборудованием и системами хранения данных</p></div>
-      <div class="block"><p>Занимаемся созданием и обслуживанием сложных «облачных храницищ»</p></div>
+      {% for block in site.data.promo-blocks %}
+        <div class="block">{{ block.content | markdownify }}</div>
+      {% endfor %}
     </aside>
   </div>
   <div class="questions_block">
     <div class="question">
       <h3>Вопросы</h3>
-
-      <div class="question_contet">
-        <h4>Что мы можем сделать для вас?</h4>
-        <p>Socket предлагает гибкие варианты конфигурации и индивидуальные системы, идеально адаптированные к вашему случаю использования.
-Наше решение для управления хранилищем является нашим основным продуктом.</p>
-      </div>
-      <div class="question_contet">
-        <h4>Нужна ли резервная копия узла управления?</h4>
-        <p>Socket предлагает гибкие варианты конфигурации и индивидуальные системы, идеально адаптированные к вашему случаю использования.
-Наше решение для управления хранилищем является нашим основным продуктом.</p>
-      </div>
-      <div class="question_contet">
-        <h4>Можно ли переместить существующие кластеры?</h4>
-        <p>Socket предлагает гибкие варианты конфигурации и индивидуальные системы, идеально адаптированные к вашему случаю использования.
-Наше решение для управления хранилищем является нашим основным продуктом.</p>
-      </div>
-      <div class="question_contet">
-        <h4>Что происходит, если я не продлю лицензию?</h4>
-        <p>Socket предлагает гибкие варианты конфигурации и индивидуальные системы, идеально адаптированные к вашему случаю использования.
-Наше решение для управления хранилищем является нашим основным продуктом.</p>
-      </div>
+      {% for question in site.data.questions %}
+        <div class="question_contet">
+          <h4>{{question.title}}</h4>
+          {{question.content | markdownify }}
+        </div>
+      {% endfor %}
     </div>
     <div class="contact_block">
       <h3>Контакты</h3>
       <div class="blocks_with_contact">
-        <div class="block">
-            <p>Мы на связи</p>
-            <a href="tel:+1 314 175 13 24" class="contact_phone">+1 314 175 13 24</a>
-            <a href="mailto:socket.info@gmail.com">socket.info@gmail.com</a>
-        </div>
-        <div class="block">
-            <p>Адрес</p>
-            <a href="#">2972 Westheimer Rd. Santa Ana, Illinois 85486 </a>
-        </div>  
+        {% include contact.html %}
       </div>
-
     </div>
   </div>
 </section>

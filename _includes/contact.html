@@ -1,0 +1,11 @@
+{% for contact in site.data.contact %}
+    <div class="block">
+        <p>{{ contact.title }}</p>
+        {% if forloop.first == true %}
+          <a href="tel:{{ contact.phone }}" class="contact_phone">{{ contact.phone }}</a>
+          <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>
+        {% else %}
+          <a href="#">{{ contact.address }} </a>
+        {% endif %}
+    </div>
+{% endfor %}

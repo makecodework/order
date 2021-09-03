@@ -5,98 +5,68 @@ title: Main page
 <section>
   <div class="promo_block">
     <div class="promo_text">
-      <h1>Управление хранением данных проще с Socket</h1>
-      <p>Мы позаботимся о ваших потребностях в хранении, чтобы вы могли сосредоточиться на развитии своего бизнеса</p>
-      
+      {% for promo in site.data.promo-text %}
+        <h1>{{ promo.title }}</h1>
+        {{ promo.content | markdownify }}
+
     </div>
     <div class="promo_img">
-      <img src="{{ site.baseurl }}/assets/img/main_img.svg" alt="Socket">
+      <img src="{{ site.baseurl }}/assets/img/{{ promo.image }}" alt="{{ promo.title }}">
     </div>
+    {% endfor %}
   </div>
   <div class="blocks">
-    <div class="block"><p>Запустили собственные стартапы и нам нравится делиться опытом с нашыми клиентами</p></div>
-    <div class="block"><p>Нам нравится работать с сетями, оборудованием и системами хранения данных</p></div>
-    <div class="block"><p>Занимаемся созданием и обслуживанием сложных «облачных храницищ»</p></div>
+    {% for block in site.data.promo-blocks %}
+      <div class="block">{{ block.content | markdownify }}</div>
+    {% endfor %}
   </div>
   {% include technology.html %}
 </section>
 
 <section>
   <h2>Сервисы</h2>
-
   <div class="tabs_block">
     <ul class="tabs">
-      <li class="active">
-        <a href="">Программное обеспечение</a>
-      </li>
-      <li>
-        <a href="">Аппаратное обеспечение</a>
-      </li>
-      <li>
-        <a href="">Консультирование</a>
-      </li>
-      <li>
-        <a href="">Обучение</a>
-      </li>
+      {% for link in site.data.promo-services %}
+        {% if forloop.first == true %}
+        <li class="active">
+          <a href="">{{ link.link }}</a>
+        </li>
+        {% else %}
+        <li>
+          <a href="">{{ link.link }}</a>
+        </li>
+        {% endif %}
+      {% endfor %}
     </ul>
     <div class="tabs-content">
-  <div class="tabs-panel active" data-index="0">
-    <h3>Программное обеспечение</h3>
-    <p>Для надёжного хранения данных требуются оптимизированные серверы хранения.
-        Socket предлагает гибкие варианты конфигурации и индивидуальные системы, идеально адаптированные к вашему случаю использования. Наше решение для управления хранилищем является нашим основным продуктом.</p>
-  </div>
-  <div class="tabs-panel" data-index="1">
-    <h3>Аппаратное обеспечение</h3>
-    <p>Для надёжного хранения данных требуются оптимизированные серверы хранения.
-        Socket предлагает гибкие варианты конфигурации и индивидуальные системы, идеально адаптированные к вашему случаю использования. Наше решение для управления хранилищем является нашим основным продуктом.</p>
-  </div>
-  <div class="tabs-panel" data-index="2">
-    <h3>Консультирование</h3>
-    <p>Для надёжного хранения данных требуются оптимизированные серверы хранения.
-        Socket предлагает гибкие варианты конфигурации и индивидуальные системы, идеально адаптированные к вашему случаю использования. Наше решение для управления хранилищем является нашим основным продуктом.</p>
-  </div>
-  <div class="tabs-panel" data-index="3">
-    <h3>Обучение</h3>
-    <p>Для надёжного хранения данных требуются оптимизированные серверы хранения.
-        Socket предлагает гибкие варианты конфигурации и индивидуальные системы, идеально адаптированные к вашему случаю использования. Наше решение для управления хранилищем является нашим основным продуктом.</p>
-  </div>
-</div>
+      {% assign count = 0 %}
+      {% for service in site.data.promo-services %}
+        {% if forloop.first == true %}
+          <div class="tabs-panel active" data-index="{{ count }}">
+            <h3>{{ service.title }}</h3>
+            {{ service.content | markdownify }}
+          </div>
+        {% else %}
+        {% capture count %}{{ count | plus:1 }}{% endcapture %}
+          <div class="tabs-panel" data-index="{{ count }}">
+            <h3>{{ service.title }}</h3>
+            {{service.content | markdownify }}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
 </section>
 <section>
   <h2>Наши клиенты</h2>
   <div class="technology_block">
     <div class="clients">
-      <div class="tech">
-        <img src="{{ site.baseurl }}/assets/img/clients/clearblue.svg" alt="socet">
-      </div>
-      <div class="tech">
-        <img src="{{ site.baseurl }}/assets/img/clients/beldesign.svg" alt="socet">
-      </div>
-      <div class="tech">
-        <img src="{{ site.baseurl }}/assets/img/clients/swisimg.svg" alt="socet">
-      </div>
-      <div class="tech">
-        <img src="{{ site.baseurl }}/assets/img/clients/garn.svg" alt="socet">
-      </div>
-      <div class="tech">
-        <img src="{{ site.baseurl }}/assets/img/clients/reebok.svg" alt="reebok">
-      </div>
-      <div class="tech">
-        <img src="{{ site.baseurl }}/assets/img/clients/polaroid.svg" alt="polaroid">
-      </div>
-      <div class="tech">
-        <img src="{{ site.baseurl }}/assets/img/clients/yellowprice.svg" alt="socet">
-      </div>
-      <div class="tech">
-        <img src="{{ site.baseurl }}/assets/img/clients/machaon.svg" alt="css3">
-      </div>
-      <div class="tech">
-        <img src="{{ site.baseurl }}/assets/img/clients/lego.svg" alt="css3">
-      </div>
-      <div class="tech">
-        <img src="{{ site.baseurl }}/assets/img/clients/hunday.svg" alt="css3">
-      </div>
+      {% for client in site.data.promo-clients %}
+        <div class="tech">
+          <img src="{{ site.baseurl }}/assets/img/clients/{{ client.image }}" alt="{{ client.title }}">
+        </div>
+      {% endfor %}
     </div>
   </div>
 </section>
@@ -104,17 +74,8 @@ title: Main page
   <h2>Контакты</h2>
   <div class="info_block">
     <div class="contact_block">
-      <div class="block">
-          <p>Мы на связи</p>
-          <a href="tel:+1 314 175 13 24" class="contact_phone">+1 314 175 13 24</a>
-          <a href="mailto:socket.info@gmail.com">socket.info@gmail.com</a>
-      </div>
-      <div class="block">
-          <p>Адрес</p>
-          <a href="#">2972 Westheimer Rd. Santa Ana, Illinois 85486 </a>
-      </div>
+      {% include contact.html %}
     </div>
-
     <div class="map_block">
       <div id="map"></div>
     </div>

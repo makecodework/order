@@ -73,7 +73,7 @@
       span {
         @include rem(28);
         line-height: 43px;
-        font-weight: 500;
+        font-weight: 400;
         color: $main_color__text;
         margin-left: 20px;
       }
@@ -129,7 +129,7 @@
           color: $main_color__blue;
         }
         &.contact_phone{
-          @include rem(32);
+          @include rem(28);
           font-weight: 500;
         }
       }

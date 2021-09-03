@@ -1,37 +1,11 @@
 <div class="technology_block">
   <h3>Мы используем технологии</h3>
   <div class="technologies">
+    {% for tech in site.data.technology %}
     <div class="tech">
-      <img src="{{ site.baseurl }}/assets/img/css_3.svg" alt="css3">
-      <span>CSS 3</span>
+      <img src="{{ site.baseurl }}/assets/img/{{ tech.image }}" alt="{{ tech.title }}">
+      <span>{{ tech.title }}</span>
     </div>
-    <div class="tech">
-      <img src="{{ site.baseurl }}/assets/img/html_5.svg" alt="css3">
-      <span>HTML 5</span>
-    </div>
-    <div class="tech">
-      <img src="{{ site.baseurl }}/assets/img/vs_code.svg" alt="css3">
-      <span>VS Code</span>
-    </div>
-    <div class="tech">
-      <img src="{{ site.baseurl }}/assets/img/java.svg" alt="css3">
-      <span>Java</span>
-    </div>
-    <div class="tech">
-      <img src="{{ site.baseurl }}/assets/img/python.svg" alt="css3">
-      <span>Python</span>
-    </div>
-    <div class="tech">
-      <img src="{{ site.baseurl }}/assets/img/php.svg" alt="css3">
-      <span>PHP</span>
-    </div>
-    <div class="tech">
-      <img src="{{ site.baseurl }}/assets/img/git.svg" alt="css3">
-      <span>Git</span>
-    </div>
-    <div class="tech">
-      <img src="{{ site.baseurl }}/assets/img/wordpress.svg" alt="css3">
-      <span>Wordpress</span>
-    </div>
+    {% endfor %}
   </div>
 </div>

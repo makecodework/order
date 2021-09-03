@@ -6,42 +6,17 @@ title: Services
   <h2>Сервисы</h2>
 
   <div class="services_blocks">
-    <div class="service_block">
-      <div class="service_img">
-        <img src="{{ site.baseurl }}/assets/img/services/service1.svg" alt="Программное обеспечение">
+    {% for service in site.data.promo-services %}
+      <div class="service_block">
+        <div class="service_img">
+          <img src="{{ site.baseurl }}/assets/img/services/{{ service.image }}" alt="{{ service.title }}">
+        </div>
+        <div class="service_text">
+            <h3>{{ service.title }}</h3>
+            {{ service.content | markdownify }}
+        </div>
       </div>
-      <div class="service_text">
-          <h3>Программное обеспечение</h3>
-          <p>Для надёжного хранения данных требуются оптимизированные серверы хранения. Socket предлагает гибкие варианты конфигурации и индивидуальные системы, идеально адаптированные к вашему случаю использования. Наше решение для управления хранилищем является нашим основным продуктом.</p>
-      </div>
-    </div>
-    <div class="service_block">
-      <div class="service_img">
-        <img src="{{ site.baseurl }}/assets/img/services/service2.svg" alt="Аппаратное обеспечение">
-      </div>
-      <div class="service_text">
-          <h3>Аппаратное обеспечение</h3>
-          <p>Наша основная платформа оптимизирована для работы с масштабируемыми и независимыми от поставщика инфраструктурами. Серверы с сетевой загрузкой, оснащённые операционной системой Linux, поддерживаемой, проверенной и предоставляемой Socket, позволяют надёжно и без особых усилий запускать отдельное программное обеспечение.</p>
-      </div>
-    </div>
-    <div class="service_block">
-      <div class="service_img">
-        <img src="{{ site.baseurl }}/assets/img/services/service3.svg" alt="Консультирование">
-      </div>
-      <div class="service_text">
-          <h3>Консультирование</h3>
-          <p>Наша команда энтузиастов технологий хорошо разбирается во всех вопросах, касающихся хранения Ceph и связанных сетей. Воспользуйтесь многолетним практическим опытом эксплуатации Ceph и учитесь на бесчисленных реализованных проектах! Любую предлагаемую конфигурацию можно протестировать в наших демонстрационных лабораториях, чтобы найти наилучшее решение для вашего случая.</p>
-      </div>
-    </div>
-    <div class="service_block">
-      <div class="service_img">
-        <img src="{{ site.baseurl }}/assets/img/services/service4.svg" alt="Обучение">
-      </div>
-      <div class="service_text">
-          <h3>Обучение</h3>
-          <p>Наши опытные системные администраторы с удовольствием передадут вам эти знания в ходе обширного обучения. Воспользуйтесь нашим опытом и учитесь на нем, чтобы оптимизировать настройку и избежать типичных ошибок. Все содержание преподается в теории и на практике, чтобы помочь вам продвинуться вперед.</p>
-      </div>
-    </div>
+    {% endfor %}
   </div>
   {% include technology.html %}
 </section>

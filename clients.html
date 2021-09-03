@@ -4,83 +4,32 @@ title: Clients
 ---
 <section class="page_section">
   <h2>Наши клиенты</h2>
-
   <div class="clients_block">
-    <div class="client_block">
-      <img src="{{ site.baseurl }}/assets/img/clients/clearblue.svg" alt="Clearblue">
-      <p>Вместе с нашим партнёром Clearblue разрабатываем новейшие технологии хранения данных и вносим вклад в их широкое применение во всех областях</p>
-    </div>
-    <div class="client_block">
-      <img src="{{ site.baseurl}}/assets/img/clients/polaroid.svg" alt="polaroid">
-      <p>Благодаря Polaroid у нас есть доступ к новейшему профессиональному оборудованию, а также к важным разработчикам</p>
-    </div>
-    <div class="client_block">
-      <img src="{{ site.baseurl}}/assets/img/clients/yellowprice.svg" alt="yellowprice">
-      <p>Наш партнёр Yellow Price предлагает серверные решения с открытым исходным кодом с функциями корпоративного класса</p>
-    </div>
-    <div class="client_block">
-      <img src="{{ site.baseurl}}/assets/img/clients/swisimg.svg" alt="swisimg">
-      <p>Мы поддерживаем Swiss image в предоставлении гипер конвергентных инфраструктур, особенно с Ceph Storage</p>
-    </div>
-    <div class="client_block">
-      <img src="{{ site.baseurl}}/assets/img/clients/machaon.svg" alt="machaon">
-      <p>Для Machaon тестировали всех возможные комбинаций оборудования и предоставили им наилучшую производительность для их установок</p>
-    </div>
-    <div class="client_block">
-      <img src="{{ site.baseurl}}/assets/img/clients/beldesign.svg" alt="beldesign">
-      <p>Прочное партнёрство с Belor design обеспечивает наилучшее качество обслуживания клиентов и производительность</p>
-    </div>
-    <div class="client_block">
-      <img src="{{ site.baseurl}}/assets/img/clients/garn.svg" alt="swisimg">
-      <p>Мы помогли Garnier протестировать наилучшие возможные комбинации оборудования на производительность  их установок.</p>
-    </div>
-    <div class="client_block">
-      <img src="{{ site.baseurl}}/assets/img/clients/reebok.svg" alt="machaon">
-      <p>Работа с Reebok позволяет нам создавать лаборатории тестирования оборудования и защищенные инфраструктуры вместе с нашими партнерами.</p>
-    </div>
-    <div class="client_block">
-      <img src="{{ site.baseurl}}/assets/img/clients/hunday.svg" alt="beldesign">
-      <p>Вместе с Hyundai мы регулярно тестируем совместимость и производительность новейших жестких дисков и USB-накопителей</p>
-    </div>
+    {% for client in site.data.promo-clients %}
+      <div class="client_block">
+        <img src="{{ site.baseurl }}/assets/img/clients/{{ client.image }}" alt="{{ client.title }}">
+        {{ client.content | markdownify }}
+      </div>
+    {% endfor %}
   </div>
 </section>
 <section class="page_section">
   <h2>Отзывы о нашей работе</h2>
 
   <div class="testimonials_block">
-    <div class="testimonial_block">
-      <div class="user">
-        <img src="{{ site.baseurl }}/assets/img/testimonials/client1.png" alt="">
-        <p>
-          Алексей Щегольников
-          <span>SEO-специалист</span>
-        </p>
+    {% for item in site.data.testimonials %}
+      <div class="testimonial_block">
+        <div class="user">
+          <img src="{{ site.baseurl }}/assets/img/testimonials/{{ item.image }}" alt="">
+          <p>
+            {{ item.name }}
+            <span>{{ item.position }}</span>
+          </p>
+        </div>
+        <h3>{{ item.title }}</h3>
+        {{ item.content | markdownify }}
       </div>
-      <h3>Socket - это наша лучшая техническая поддержка</h3>
-      <p>Благодарю за ответственную работу над нашим сайтом команду. Ребята знают что делают, на них можно положиться! Спасибо!</p>
-    </div>
-    <div class="testimonial_block">
-      <div class="user">
-        <img src="{{ site.baseurl }}/assets/img/testimonials/client2.png" alt="">
-        <p>
-          Максим
-          <span>Маркетолог</span>
-        </p>
-      </div>
-      <h3>Надёжный и ответственный аутсорсинг подрядчик</h3>
-      <p>Спасибо, коллеги, за вашу вовлеченность! Вы делаете собственников более свободными и счастливыми. Нам не нужно забивать себе голову диджитал маркетингом и техническими заданиями. Спасибо, что я могу уделять время своей работе и своим клиентам!</p>
-    </div>
-    <div class="testimonial_block">
-      <div class="user">
-        <img src="{{ site.baseurl }}/assets/img/testimonials/client3.png" alt="">
-        <p>
-          Мария Алёхина
-          <span>Имидж-мейкер</span>
-        </p>
-      </div>
-      <h3>С удовольствием продолжаем сотрудничать с Socket</h3>
-      <p>Коммуникация на высоком уровне, работа с ними надёжная и познавательная. Ещё, что очень для меня важно, они предлагают варианты решения поставленной задачи. Спасибо за заботу!))</p>
-    </div>
+    {% endfor %}
     <div class="testimonial_block">
         Здесь может быть Ваш отзыв
     </div>
