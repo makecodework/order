@@ -51,6 +51,10 @@
     }
   }
 
+  .info_block {
+    grid-template-columns: 32% repeat(3,1fr);
+  }
+
 }
 /* On screens that are 600px or less, set the background color to olive */
 @media screen and (max-width: 768px) {
@@ -347,7 +351,9 @@
       grid-column-gap: 57px;
     }
   }
-
+  .testimonials_block {
+    grid-template-columns: repeat(1,1fr);
+  }
   .info_block {
     .contact_block {
       grid-template-columns: repeat(1, 1fr) !important;
@@ -408,6 +414,11 @@
   .clients_block {
     grid-template-columns: repeat(1, 1fr);
     grid-row-gap: 60px;
+    .client_block {
+      img {
+        margin: 0 auto 20px;
+      }
+    }
     p{
       text-align: center;
     }
@@ -415,6 +426,17 @@
   /* About */
   .questions_block {
     flex-direction: column;
+    .question{
+      margin-right: 0;
+      flex: none;
+      .question_contet {
+        h4 {
+          @include rem(27);
+          line-height: 46px;
+          font-weight: 500;
+        }
+      }
+    }
     .contact_block {
       .block {
         height: 236px;
