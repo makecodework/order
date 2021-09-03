@@ -7,9 +7,9 @@
       {% include nav.html navclass='nav-footer' %}
       <div class="footer_icon">
         <ul>
-          <li><a href="#"><img src="{{site.baseurl}}/assets/img/facebook.svg" alt="facebook"></a></li>
-          <li><a href="#"><img src="{{site.baseurl}}/assets/img/twitter.svg" alt="twitter"></a></li>
-          <li><a href="#"><img src="{{site.baseurl}}/assets/img/instagram.svg" alt="instagram"></a></li>
+          {% for link in site.data.social %}
+            <li><a href="{{ link.link }}"><img src="{{site.baseurl}}/assets/img/{{ link.image }}" alt="{{link.title}}"></a></li>
+          {% endfor %}
         </ul>
       </div>
     </div>
