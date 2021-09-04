@@ -5,6 +5,7 @@
   -o-transition: all .30s linear;
   transition: all .30s linear;
   ul {
+    justify-content: flex-end;
     li{
       display: block;
       margin-right: 40px;
@@ -16,18 +17,13 @@
 }
 .nav-footer {
   width: 470px;
-  ul {
-    justify-content: center;
-
-
-  }
 }
 nav{
   ul.menu {
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
-    justify-content: flex-end;
+
     align-items: center;
 
     li{
