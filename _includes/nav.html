@@ -1,12 +1,14 @@
+<a class="toggleMainNav" href="javascript:" title="show navigation">
+    <!--  the famous burger  -->
+    <div id="hamburger">
+        <em class="line"></em>
+        <em class="line"></em>
+        <em class="line"></em>
+    </div>
+</a>
 <nav class="{{ include.navclass }}">
-  <div class="hamburger-container">
-    <ul class="hamburger">
-      <li></li>
-      <li></li>
-      <li></li>
-    </ul>
-  </div>
-  <ul class="menu">
+
+  <ul class="menu mainNavList">
     <li><a href="{{ site.baseurl }}/services.html" class="{% if page.url=='/services.html'%}current {%  endif %}">Сервисы</a></li>
     <li><a href="{{ site.baseurl }}/clients.html" class="{% if page.url=='/clients.html'%}current {%endif %}">Наши клиенты</a></li>
     <li><a href="{{ site.baseurl }}/about.html" class="{% if page.url=='/about.html'%}current {%endif %}">О нас</a></li>
