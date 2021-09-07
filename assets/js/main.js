@@ -1,9 +1,14 @@
-// Responsive menu with hamburger.
-$("#hamburger").on("click", function(){
-	  $(this).toggleClass("hamburger__open");
-	  $( ".nav-top" ).toggleClass( "open" );
-	  $("html").toggleClass( "fixed" );
-}); // #Responsive menu with hamburger.
+jQuery(document).ready(function($){
+	// Responsive menu with hamburger.
+	$("#hamburger").on("click", function(){
+		  $(this).toggleClass("hamburger__open");
+		  $( ".nav-top" ).toggleClass( "open" );
+		  $("html").toggleClass( "fixed" );
+	}); // #Responsive menu with hamburger.
+
+
+});
+
 // Google map.
 function initMap(){
   // The location of Uluru
@@ -22,7 +27,7 @@ function initMap(){
     });
 }
 // #Google map.
-//
+
 // Tabs with services at home page.
 const tabLinks = document.querySelectorAll(".tabs a");
 const tabPanels = document.querySelectorAll(".tabs-panel");
@@ -41,4 +46,22 @@ for (let el of tabLinks) {
     panel[0].classList.add("active");
     });
   }
-// #Tabs with services at home page.
+
+// Load More
+const loadmore = document.querySelector('#loadmore');
+  let currentItems = 2;
+  loadmore.addEventListener('click', (e) => {
+		e.preventDefault();
+      const elementList = [...document.querySelectorAll('.clients_block .client_block')];
+			const el = elementList.length - 2; // Take the penultimate item
+			for (let i = currentItems; i < currentItems + 2; i++) {
+				  if (elementList[i] && i != el) {
+						elementList[i].style.display = 'block';
+          }
+      }
+      currentItems += 2;
+
+      if (currentItems >= elementList.length) {
+          event.target.style.display = 'none';
+      }
+  })

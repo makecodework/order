@@ -1,13 +1,16 @@
 header{
   padding-top: 40px;
-  .logo {
 
-  }
   .header {
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .logo {
+    img {
+      height: 80px;
+    }
   }
 }

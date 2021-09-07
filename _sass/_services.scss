@@ -1,8 +1,9 @@
 section{
+  margin-bottom: 170px;
   .service_block{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 130px;
+    margin-bottom: 140px;
     .service_img{
       justify-self: center;
     }
@@ -15,7 +16,6 @@ section{
       p{
         @include rem(18);
         line-height: 28px;
-        margin-bottom: 30px;
       }
     }
     &:nth-child(even){

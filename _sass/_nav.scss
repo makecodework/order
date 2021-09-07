@@ -12,11 +12,18 @@
       &:last-child{
         margin: 0;
       }
+      a {
+        text-transform: uppercase;
+      }
     }
   }
 }
 .nav-footer {
-  width: 470px;
+  width: 60%;
+  
+  ul.menu {
+    justify-content: center;
+  }
 }
 nav{
   ul.menu {
@@ -31,7 +38,7 @@ nav{
       margin-right: 40px;
     }
     a {
-      @include rem(18);
+      @include rem(20);
       font-weight: 500;
       color: $main_color__text;
       &:hover {

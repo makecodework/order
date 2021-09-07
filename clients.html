@@ -11,11 +11,13 @@ title: Clients
         {{ client.content | markdownify }}
       </div>
     {% endfor %}
+
   </div>
+  <!-- Load More Button -->
+   <div id="loadmore" >Показать еще <span><img src="{{ site.baseurl }}/assets/img/arrow.svg">  </span></div>
 </section>
 <section class="page_section">
-  <h2>Отзывы о нашей работе</h2>
-
+  <h3>Отзывы о нашей работе</h3>
   <div class="testimonials_block">
     {% for item in site.data.testimonials %}
       <div class="testimonial_block">
@@ -26,12 +28,12 @@ title: Clients
             <span>{{ item.position }}</span>
           </p>
         </div>
-        <h3>{{ item.title }}</h3>
+        <h4>{{ item.title }}</h4>
         {{ item.content | markdownify }}
       </div>
     {% endfor %}
     <div class="testimonial_block">
-        Здесь может быть Ваш отзыв
+        <p>Здесь может быть Ваш отзыв</p>
     </div>
   </div>
 </section>

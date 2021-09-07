@@ -8,9 +8,9 @@ title: Main page
       {% for promo in site.data.promo-text %}
         <h1>{{ promo.title }}</h1>
         {{ promo.content | markdownify }}
-
     </div>
     <div class="promo_img">
+
       <img src="{{ site.baseurl }}/assets/img/{{ promo.image }}" alt="{{ promo.title }}">
     </div>
     {% endfor %}
@@ -60,7 +60,7 @@ title: Main page
 </section>
 <section>
   <h2>Наши клиенты</h2>
-  <div class="technology_block">
+  <div class="clients_main_block">
     <div class="clients">
       {% for client in site.data.promo-clients %}
         <div class="tech">

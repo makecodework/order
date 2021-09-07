@@ -3,9 +3,9 @@
         <p>{{ contact.title }}</p>
         {% if forloop.first == true %}
           <a href="tel:{{ contact.phone }}" class="contact_phone">{{ contact.phone }}</a>
-          <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>
+          <a href="mailto:{{ contact.email }}" class="contact_email">{{ contact.email }}</a>
         {% else %}
-          <a href="#">{{ contact.address }} </a>
+          <a href="#" class="contact_email">{{ contact.address }} </a>
         {% endif %}
     </div>
 {% endfor %}
