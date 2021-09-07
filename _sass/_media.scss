@@ -108,7 +108,6 @@
       }
   }
 }
-
 }
 /* On screens that are 768px or less */
 @media screen and (max-width: 768px) {
@@ -270,7 +269,6 @@
     grid-row-gap: 70px;
 
     .client_block{
-
       p{
         @include rem(16);
         line-height: 25px;
@@ -293,7 +291,6 @@
   .page_section {
     h2{
       @include rem(70);
-
     }
   }
   .about_block {

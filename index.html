@@ -64,7 +64,10 @@ title: Main page
     <div class="clients">
       {% for client in site.data.promo-clients %}
         <div class="tech">
-          <img src="{{ site.baseurl }}/assets/img/clients/{{ client.image }}" alt="{{ client.title }}">
+<a href="{{ site.baseurl }}/clients.html">
+  <img src="{{ site.baseurl }}/assets/img/clients/{{ client.image }}" alt="{{ client.title }}">
+</a>
+
         </div>
       {% endfor %}
     </div>

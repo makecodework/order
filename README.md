@@ -1,4 +1,4 @@
-# socket
+# Socket
 
 Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
 
@@ -33,9 +33,20 @@ Or install it yourself as:
 
 TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
 
+### _data
+
+### _includes
+
+### _layouts
+
+### _sass
+
+### assets
+
+
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Pull requests are welcome on GitHub at https://github.com/makecodework/order. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Development
 
@@ -49,4 +60,3 @@ To add a custom directory to your theme-gem, please edit the regexp in `socket.g
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
