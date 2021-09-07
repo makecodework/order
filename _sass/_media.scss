@@ -160,10 +160,12 @@
       grid-row-gap: 80px;
       grid-column-gap: 79px;
       .tech {
-        span {
-          @include rem(24);
-          font-weight: 400;
-          line-height: 37px;
+        a {
+          span {
+            @include rem(24);
+            font-weight: 400;
+            line-height: 37px;
+          }
         }
       }
     }
@@ -554,11 +556,11 @@
   .technology_block {
     .technologies{
       grid-row-gap: 70px;
-      grid-column-gap: 30px;
+      grid-column-gap: 52px;
       .tech {
          a {
+           flex-wrap: wrap;
            span {
-            @include rem(24);
             display: block;
             text-align: center;
            }
@@ -738,6 +740,33 @@
     }
   }
 }
+@media screen and (max-width: 380px) {
+  .technology_block {
+    h3 {
+      @include rem(24)
+
+    }
+    .technologies{
+      grid-row-gap: 60px;
+      .tech {
+          img {
+            margin: 0 auto;
+          }
+         a {
+           display: inline;
+           span {
+            @include rem(20);
+            margin: 16px 0;
+            display: block;
+            text-align: center;
+
+           }
+         }
+      }
+    }
+
+  }
+}
 /* On screens that are 320px or less */
 @media screen and (max-width: 320px) {
   .page_section {
@@ -769,31 +798,7 @@
     }
   }
 
-  .technology_block {
-    h3 {
-      @include rem(24)
 
-    }
-    .technologies{
-      grid-row-gap: 60px;
-      .tech {
-          img {
-            margin: 0 auto;
-          }
-         a {
-           display: inline;
-           span {
-            @include rem(20);
-            margin: 16px 0;
-            display: block;
-            text-align: center;
-
-           }
-         }
-      }
-    }
-
-  }
 
   .tabs_block {
     .tabs-panel {
