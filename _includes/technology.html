@@ -3,8 +3,10 @@
   <div class="technologies">
     {% for tech in site.data.technology %}
     <div class="tech">
-      <img src="{{ site.baseurl }}/assets/img/{{ tech.image }}" alt="{{ tech.title }}">
-      <span>{{ tech.title }}</span>
+      <a href="{{ site.baseurl }}/services.html">
+        <img src="{{ site.baseurl }}/assets/img/{{ tech.image }}" alt="{{ tech.title }}">
+        <span>{{ tech.title }}</span>
+      </a>
     </div>
     {% endfor %}
   </div>

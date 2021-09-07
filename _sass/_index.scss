@@ -85,17 +85,26 @@
     display: grid;
     grid-row-gap: 80px;
     .tech {
-      display: -webkit-flex;
-      display: -ms-flex;
-      display: flex;
-      align-items: center;
-      span {
-        @include rem(28);
-        line-height: 43px;
-        font-weight: 400;
-        color: $main_color__text;
-        margin-left: 20px;
+
+      a{
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        align-items: center;
+        span {
+          @include rem(28);
+          line-height: 43px;
+          font-weight: 400;
+          color: $main_color__text;
+          margin-left: 20px;
+          &:hover {
+            color: $main_color__blue;
+          }
+        }
+
+
       }
+
     }
   }
   .technologies{
