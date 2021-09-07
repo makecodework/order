@@ -72,6 +72,7 @@ section {
   h3{
     @include rem(50);
     line-height: 61px;
+    font-weight: 500;
   }
 }
 #map{
