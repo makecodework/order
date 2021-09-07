@@ -95,12 +95,13 @@
   }
 
   .info_block {
-    grid-template-columns: 32% repeat(3,1fr);
+    grid-template-columns: 37% repeat(3,1fr);
     .contact_block{
       .block{
         a {
           &.contact_email {
             width: auto;
+            word-break: break-word;
           }
 
         }
@@ -129,7 +130,7 @@
         @include rem(44);
         line-height: 59px;
         margin-top: 15px;
-        width: 482px;
+        width: 60%;
       }
       p {
         @include rem(20);
@@ -316,6 +317,11 @@
     margin-top: 130px;
     .question{
       margin-right: 0;
+      .question_contet {
+        h4 {
+          margin-bottom: 20px;
+        }
+      }
     }
     .contact_block {
       flex: 1 1 100%;
@@ -389,6 +395,7 @@
   header {
      .header {
        display: block;
+
        .logo {
          img {
            height: 70px;
@@ -399,9 +406,9 @@
          display:block;
          position:absolute;
          height: 18px;
-         width:26px;
+         width: 26px;
          right: 15px;
-         top: 1.5%;
+         top: 50px;
          transform:translateY(-50%);
          z-index: 200;
        }
@@ -430,7 +437,7 @@
        }
        #hamburger:hover .line:nth-child(1),
        #hamburger:focus .line:nth-child(1) {
-         transform: translateY(-1px);
+         transform: translateY(-.5px);
        }
        #hamburger:hover .line:nth-child(3),
        #hamburger:focus .line:nth-child(3) {
@@ -468,7 +475,7 @@
       align-items: center;
       justify-content: center;
       width: 100%;
-      height: 13%;
+      height: 100vh;
        li {
          width: 100%;
          margin-right: 0;
@@ -594,10 +601,12 @@
     h3 {
       text-align: center;
       margin-bottom: 40px;
+
     }
     h2 {
       @include rem(48);
-      line-height: 38px;
+      line-height: 65px;
+
 
     }
     h3 {
@@ -716,6 +725,7 @@
       flex-direction: column;
       .nav-footer{
         margin: 40px 0 70px;
+
       }
     }
   }
@@ -724,9 +734,7 @@
 @media screen and (max-width: 320px) {
   .page_section {
     margin-top: 50px;
-    h2{
-      line-height: 65px;
-    }
+
     h3 {
       line-height: 38px;
     }

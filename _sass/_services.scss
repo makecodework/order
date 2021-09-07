@@ -12,6 +12,7 @@ section{
         margin-bottom: 30px;
         @include rem(40);
         color: $main_color__text;
+        font-weight: 500;
       }
       p{
         @include rem(18);
