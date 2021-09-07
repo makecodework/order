@@ -499,7 +499,7 @@
     .promo_text{
       position: static;
       h1,p {
-        width: 440px;
+        width: 100%;
       }
       h1 {
         @include rem(44);
