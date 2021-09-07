@@ -72,6 +72,7 @@
   .clients_main_block {
     .clients {
       grid-template-columns: repeat(4,1fr);
+      grid-column-gap: 96px;
 
       .tech {
         &:nth-last-of-type(-n+2) {
@@ -172,7 +173,7 @@
   }
   .tabs_block {
     display: block;
-    width: 650px;
+    width: 100%;
   }
   .tabs {
     flex-direction: row;
@@ -217,6 +218,7 @@
   .clients_main_block{
      .clients {
        grid-template-columns: repeat(3,1fr);
+       grid-column-gap: 80px;
 
        .tech {
          &:nth-last-of-type(-n+1) {
@@ -581,6 +583,12 @@
     .clients {
       grid-template-columns: repeat(2,1fr);
       grid-column-gap: 57px;
+
+      .tech {
+        &:nth-last-of-type(-n+2){
+          display: block;
+        }
+      }
     }
   }
   .info_block {
