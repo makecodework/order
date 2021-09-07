@@ -49,19 +49,19 @@ for (let el of tabLinks) {
 
 // Load More
 const loadmore = document.querySelector('#loadmore');
-  let currentItems = 2;
-  loadmore.addEventListener('click', (e) => {
-		e.preventDefault();
-      const elementList = [...document.querySelectorAll('.clients_block .client_block')];
-			const el = elementList.length - 2; // Take the penultimate item
-			for (let i = currentItems; i < currentItems + 2; i++) {
-				  if (elementList[i] && i != el) {
-						elementList[i].style.display = 'block';
-          }
-      }
-      currentItems += 2;
+let currentItems = 2;
+loadmore.addEventListener('click', (e) => {
+	e.preventDefault();
+    const elementList = [...document.querySelectorAll('.clients_block .client_block')];
+		const el = elementList.length - 2; // Take the penultimate item
+		for (let i = currentItems; i <= currentItems + 2; i++) {
+			  if (elementList[i] && i != el) {
+					elementList[i].style.display = 'block';
+        }
+    }
+    currentItems += 2;
 
-      if (currentItems >= elementList.length) {
-          event.target.style.display = 'none';
-      }
-  })
+    if (currentItems >= elementList.length) {
+        event.target.style.display = 'none';
+    }
+});
