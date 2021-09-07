@@ -156,6 +156,8 @@
   .technology_block {
     .technologies {
       grid-template-columns: repeat(3,1fr);
+      grid-row-gap: 80px;
+      grid-column-gap: 79px;
       .tech {
         span {
           @include rem(24);
@@ -360,6 +362,7 @@
 
     .technology_block .technologies {
       grid-template-columns: repeat(2,1fr);
+
     }
     .tabs-panel.active h3 {
       @include rem(35);
@@ -548,15 +551,15 @@
   }
   .technology_block {
     .technologies{
+      grid-row-gap: 70px;
+      grid-column-gap: 52px;
       .tech {
-        display: inline;
-          img {
-            margin: 0 auto;
-          }
-         span {
-          margin: 16px 0;
-          display: block;
-          text-align: center;
+         a {
+           span {
+            @include rem(24);
+            display: block;
+            text-align: center;
+           }
          }
       }
     }
@@ -763,6 +766,25 @@
       @include rem(24)
 
     }
+    .technologies{
+      grid-row-gap: 60px;
+      .tech {
+          img {
+            margin: 0 auto;
+          }
+         a {
+           display: inline;
+           span {
+            @include rem(20);
+            margin: 16px 0;
+            display: block;
+            text-align: center;
+
+           }
+         }
+      }
+    }
+
   }
 
   .tabs_block {
