@@ -26,34 +26,27 @@ All packages are in  `package.json`:
 ### _includes
   Each duplicate block of the website is placed into special files and stored in this folder:
 
-    ```gem
       header.html
       nav.html
       nav-footer.html
       contact.html
       footer.html
-    ```
 
 ### _layouts
   The main basic file stored here.
-    ```yaml
+
     default.html
-    ```
 
 ### _sass
   In this folder scss files for all parts of the website. The main file is:
 
-    ```yaml
     style.scss
-    ```
 
 ### assets
   in this folder are:
 
-    ```yaml
     js/
     images/
-    ```
 
 ## Contributing
 
