@@ -12,9 +12,7 @@ email: Your email here
 description: meta description for SEO
 ```
 
-Use gulp if you need in  `gulpfile.js`:
-
-  In this file there are gulp tasks
+Use gulp if you need in  `gulpfile.js`: `In this file there are gulp tasks`
 
 All packages are in  `package.json`:
 
