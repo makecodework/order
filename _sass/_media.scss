@@ -429,7 +429,7 @@
        #hamburger {
          display:block;
          position:absolute;
-         height: 12px;
+         height: 48px;
          width: 36px;
          right: 15px;
          top: 50px;
@@ -447,17 +447,17 @@
          transition: all 0.3s cubic-bezier(0.58, 0, 0.58, 1);
        }
        #hamburger .line:nth-child(1) {
-         top: 0;
+         top: 18px;
          width: 36px;
        }
        #hamburger .line:nth-child(2) {
          top: 50%;
-         margin-top: 3px;
+         margin-top: 5px;
          width: 36px;
        }
        #hamburger .line:nth-child(3) {
          top: 100%;
-         margin-top: 6px;
+         margin-top: -8px;
          width: 36px;
        }
        #hamburger:hover .line:nth-child(1),
@@ -477,6 +477,7 @@
        }
        #hamburger.hamburger__open .line:nth-child(3) {
          transform: translateY(-8px) rotate(-45deg);
+         margin-top: -13px;
        }
      }
   }
