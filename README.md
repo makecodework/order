@@ -26,12 +26,12 @@ All packages are in  `package.json`:
 ### _includes
   Each duplicate block of the website is placed into special files and stored in this folder:
 
-    ```yaml
-    header.html
-    nav.html
-    nav-footer.html
-    contact.html
-    footer.html
+    ```gem
+      header.html
+      nav.html
+      nav-footer.html
+      contact.html
+      footer.html
     ```
 
 ### _layouts
