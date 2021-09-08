@@ -1,61 +1,59 @@
 # Socket
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
+Welcome to Socket theme! In this directory, you'll find the files you need to be able to use your theme. All layouts in `_layouts`, includes in `_includes`, sass files in `_sass` and any other assets in `assets`.
 
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
+## Configuration
 
-TODO: Delete this and the text above, and describe your gem
-
-
-## Installation
-
-Add this line to your Jekyll site's `Gemfile`:
-
-```ruby
-gem "socket"
-```
-
-And add this line to your Jekyll site's `_config.yml`:
+Fill all meta configuration in  `_config.yml`:
 
 ```yaml
-theme: socket
+title: The title of the website
+email: Your email here
+description: meta description for SEO
 ```
 
-And then execute:
+Use gulp if you need in  `gulpfile.js`:
 
-    $ bundle
+  In this file there are gulp tasks
 
-Or install it yourself as:
+All packages are in  `package.json`:
 
-    $ gem install socket
-
-## Usage
-
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+## Structure
 
 ### _data
   All content stored in this folder and is divided into separate yml files.
+
 ### _includes
   Each duplicate block of the website is placed into special files and stored in this folder:
 
+    ```yaml
     header.html
     nav.html
     nav-footer.html
     contact.html
     footer.html
+    ```
 
 ### _layouts
   The main basic file stored here.
-
+    ```yaml
     default.html
+    ```
 
 ### _sass
+  In this folder scss files for all parts of the website. The main file is:
+
+    ```yaml
+    style.scss
+    ```
 
 ### assets
-  in this folder are :
+  in this folder are:
 
-    js
-    images
+    ```yaml
+    js/
+    images/
+    ```
 
 ## Contributing
 
