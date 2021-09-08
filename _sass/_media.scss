@@ -1,3 +1,14 @@
+@media screen and (max-width: 1920px) {
+  .promo_block  {
+    .promo_text {
+      h1 {
+        width: 50%;
+        
+      }
+
+    }
+  }
+}
 /* On screens that are 1000px or less */
 @media screen and (max-width: 1000px) {
   .page_section{
