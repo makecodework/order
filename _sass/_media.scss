@@ -778,7 +778,22 @@
   }
 }
 @media screen and (max-width: 380px) {
-
+  .contact_block {
+    .block {
+      p {
+        @include rem(20);
+        line-height: 29px;
+      }
+      a.contact_phone {
+        @include rem(28);
+      }
+      a.contact_email {
+        @include rem(18);
+        word-break: unset;
+        width: 212px;
+      }
+    }
+  }
   .footer {
     .nav-footer {
       ul {
@@ -846,21 +861,7 @@
     }
   }
 
-  .contact_block {
-    .block {
-      p {
-        @include rem(20);
-        line-height: 29px;
-      }
-      a.contact_phone {
-        @include rem(28);
-      }
-      a.contact_email {
-        @include rem(18);
-        width: 212px;
-      }
-    }
-  }
+
   /* Service */
   section{
     .service_block {
