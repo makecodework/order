@@ -85,30 +85,38 @@
     display: grid;
     grid-row-gap: 80px;
     .tech {
-
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      align-items: center;
       a{
-        display: -webkit-flex;
-        display: -ms-flex;
-        display: flex;
-        align-items: center;
-        
-
-        span {
           @include rem(28);
           line-height: 43px;
           font-weight: 400;
           color: $main_color__text;
-          margin-left: 20px;
           &:hover {
             color: $main_color__blue;
           }
-        }
-
 
       }
 
     }
   }
+  .technologies {
+    .tech {
+      a {
+        margin-left: 20px;
+      }
+    }
+  }
+  .clients {
+    .tech {
+      a {
+        margin-left: 0;
+      }
+    }
+  }
+
   .technologies{
     grid-template-columns: repeat(4, 1fr);
   }
@@ -181,7 +189,7 @@
         line-height: 35px;
         width: 262px;
         font-weight: 400;
-        /* word-break: break-all; */
+        
       }
 
     }
