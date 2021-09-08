@@ -82,6 +82,11 @@
     }
 
   }
+  .contacts {
+    position: sticky;
+    top: 0;
+    border: 1px solid red;
+  }
 }
 .contact_block {
   flex: 1 2 30%;

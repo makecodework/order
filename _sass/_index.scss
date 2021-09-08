@@ -89,22 +89,25 @@
       display: -ms-flex;
       display: flex;
       align-items: center;
-      a{
+      a,
+      span{
           @include rem(28);
           line-height: 43px;
           font-weight: 400;
           color: $main_color__text;
-          &:hover {
-            color: $main_color__blue;
-          }
 
+      }
+      a {
+        &:hover {
+          color: $main_color__blue;
+        }
       }
 
     }
   }
   .technologies {
     .tech {
-      a {
+      a,span {
         margin-left: 20px;
       }
     }
@@ -189,7 +192,7 @@
         line-height: 35px;
         width: 262px;
         font-weight: 400;
-        
+
       }
 
     }

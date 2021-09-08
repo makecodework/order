@@ -21,5 +21,16 @@ title: Services
 
 </section>
 <section>
-  {% include technology.html %}
+  <div class="technology_block">
+    <h3>Мы используем технологии</h3>
+    <div class="technologies">
+      {% for tech in site.data.technology %}
+      <div class="tech">
+          <img src="{{ site.baseurl }}/assets/img/{{ tech.image }}" alt="{{ tech.title }}">
+          <span>{{ tech.title }}</span>
+          <!-- <a href="#">{{ tech.title }}</a> -->
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </section>
