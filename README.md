@@ -34,19 +34,28 @@ Or install it yourself as:
 TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
 
 ### _data
-  All content stored in this folder is divided into separate yml files.
+  All content stored in this folder and is divided into separate yml files.
 ### _includes
-  Each common files are stored in this folder:
+  Each duplicate block of the website is placed into special files and stored in this folder:
 
-    $ header.html
-    $ footer.html
-    
+    header.html
+    nav.html
+    nav-footer.html
+    contact.html
+    footer.html
+
 ### _layouts
+  The main basic file stored here.
+
+    default.html
 
 ### _sass
 
 ### assets
+  in this folder are :
 
+    js
+    images
 
 ## Contributing
 
