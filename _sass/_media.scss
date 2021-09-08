@@ -184,7 +184,11 @@
     flex-wrap: wrap;
     padding: 50px 34px 40px;
     margin-bottom: 40px;
-    width: 85%;
+
+  }
+  .tabs,
+  .tabs-content {
+    width: 82%;
   }
   .tabs li {
     width: 100%;
@@ -336,6 +340,7 @@
     .contact_block {
       flex: 1 1 100%;
       grid-template-columns: repeat(1, 1fr);
+      position: static;
       .blocks_with_contact {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -424,12 +429,13 @@
        #hamburger {
          display:block;
          position:absolute;
-         height: 24px;
+         height: 12px;
          width: 36px;
          right: 15px;
          top: 50px;
          transform:translateY(-50%);
          z-index: 200;
+
        }
        #hamburger .line {
          width: 36px;
@@ -446,12 +452,12 @@
        }
        #hamburger .line:nth-child(2) {
          top: 50%;
-         margin-top: -1px;
+         margin-top: 3px;
          width: 36px;
        }
        #hamburger .line:nth-child(3) {
          top: 100%;
-         margin-top: -2px;
+         margin-top: 6px;
          width: 36px;
        }
        #hamburger:hover .line:nth-child(1),
@@ -530,17 +536,30 @@
 
       }
       p {
-        @include rem(18);
+        @include rem(16);
+        line-height: 28px;
       }
     }
     .promo_img{
       width: 350px;
     }
   }
+  .blocks{
+    .block {
+      p {
+        @include rem(18);
+        line-height: 31px;
+      }
+    }
+  }
   .tabs_block {
     width: 100%;
-    .tabs{
+    .tabs,
+    .tabs-content {
       width: 100%;
+    }
+    .tabs,{
+
       li {
         a {
           @include rem(20);
@@ -717,7 +736,6 @@
   .questions_block {
     flex-direction: column;
 
-
     .question,
     .contacts{
       margin-right: 0;
@@ -732,6 +750,10 @@
           @include rem(27);
           line-height: 46px;
           font-weight: 500;
+        }
+        p{
+          @include rem(15);
+          line-height: 23px;
         }
       }
     }
@@ -748,6 +770,12 @@
       flex-direction: column;
       .nav-footer{
         margin: 40px 0 70px;
+
+        ul.menu {
+          a {
+            @include rem(15);
+          }
+        }
 
       }
     }
@@ -832,7 +860,7 @@
         margin-top: 15px;
       }
       p {
-        @include rem(18);
+        @include rem(16);
         line-height: 28px;
       }
     }
@@ -879,5 +907,17 @@
       }
     }
   }
+  footer {
+    .copyright{
 
+      margin: 52px auto;
+      text-align: center;
+
+      span {
+        @include rem(14);
+        font-weight: 400;
+        color: $span_color__text;
+      }
+    }
+  }
 }

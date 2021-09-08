@@ -57,6 +57,7 @@
       @include rem(70);
       font-weight: 500;
       margin-bottom: 50px;
+
     }
   }
   .question{
@@ -83,9 +84,11 @@
 
   }
   .contacts {
-    position: sticky;
-    top: 0;
-    border: 1px solid red;
+    .contact_block {
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0; /* required */
+    }
   }
 }
 .contact_block {
