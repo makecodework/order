@@ -184,6 +184,7 @@
     flex-wrap: wrap;
     padding: 50px 34px 40px;
     margin-bottom: 40px;
+    width: 85%;
   }
   .tabs li {
     width: 100%;
@@ -325,6 +326,7 @@
     margin-top: 130px;
     .question{
       margin-right: 0;
+      margin-bottom: 130px;
       .question_contet {
         h4 {
           margin-bottom: 20px;
@@ -422,8 +424,8 @@
        #hamburger {
          display:block;
          position:absolute;
-         height: 18px;
-         width: 26px;
+         height: 24px;
+         width: 36px;
          right: 15px;
          top: 50px;
          transform:translateY(-50%);
@@ -440,17 +442,17 @@
        }
        #hamburger .line:nth-child(1) {
          top: 0;
-         width: 26px;
+         width: 36px;
        }
        #hamburger .line:nth-child(2) {
          top: 50%;
          margin-top: -1px;
-         width: 26px;
+         width: 36px;
        }
        #hamburger .line:nth-child(3) {
          top: 100%;
          margin-top: -2px;
-         width: 26px;
+         width: 36px;
        }
        #hamburger:hover .line:nth-child(1),
        #hamburger:focus .line:nth-child(1) {
@@ -462,7 +464,7 @@
        }
        #hamburger.hamburger__open .line:nth-child(1) {
          transform: translateY(8px) rotate(45deg);
-         width: 26px;
+         width: 36px;
        }
        #hamburger.hamburger__open .line:nth-child(2) {
          opacity: 0;
@@ -538,6 +540,7 @@
   .tabs_block {
     width: 100%;
     .tabs{
+      width: 100%;
       li {
         a {
           @include rem(20);
@@ -593,6 +596,7 @@
     }
   }
   .clients_main_block {
+    margin-top: 40px;
     .clients {
       grid-template-columns: repeat(2,1fr);
       grid-column-gap: 57px;
@@ -712,9 +716,7 @@
   }
   .questions_block {
     flex-direction: column;
-    .question {
-      margin-bottom: 130px;
-    }
+
 
     .question,
     .contacts{
