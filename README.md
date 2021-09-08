@@ -37,8 +37,8 @@ TODO: Write usage instructions here. Describe your available layouts, includes, 
   All content stored in this folder is divided into separate yml files.
 ### _includes
   Each common files are stored in this folder:
-      header.html
-      footer.html
+    $ header.html
+    $ footer.html
 ### _layouts
 
 ### _sass
