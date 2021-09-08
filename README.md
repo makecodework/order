@@ -34,9 +34,11 @@ Or install it yourself as:
 TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
 
 ### _data
-
+  All content stored in this folder is divided into separate yml files.
 ### _includes
-
+  Each common files are stored in this folder:
+      header.html
+      footer.html
 ### _layouts
 
 ### _sass
@@ -46,7 +48,7 @@ TODO: Write usage instructions here. Describe your available layouts, includes, 
 
 ## Contributing
 
-Pull requests are welcome on GitHub at https://github.com/makecodework/order. 
+Pull requests are welcome on GitHub at https://github.com/makecodework/order.
 
 ## License
 
