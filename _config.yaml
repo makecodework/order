@@ -48,4 +48,3 @@ exclude:
    - socket.gemspec
    - README.md
    - LICENSE.txt
-   - socket.gemspec
