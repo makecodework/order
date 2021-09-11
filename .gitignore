@@ -7,3 +7,4 @@ node_modules
 Gemifile.lock
 npm-shrinkwrap.json
 package-lock.json
+socket.gemspec
