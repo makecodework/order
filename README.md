@@ -37,11 +37,10 @@ Welcome to Socket theme! In this directory, you'll find the files you need to be
 
     Fill all meta configuration in  `_config.yml`:
 
-    ```yaml
     title: The title of the website
     email: Your email here
     description: meta description for SEO
-    ```
+    
 
     Use gulp if you need in  `gulpfile.js`: `In this file there are gulp tasks`
 
