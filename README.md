@@ -9,7 +9,7 @@ Welcome to Socket theme! In this directory, you'll find the files you need to be
   All content stored in this folder and is divided into separate yml files.
 
 ### _includes
-  Each duplicate block of the website is placed into special files and stored in this folder:
+  Each duplicated block of the website is placed into special files and stored in this folder:
 
       header.html
       nav.html
@@ -53,7 +53,8 @@ Welcome to Socket theme! In this directory, you'll find the files you need to be
         `<script async defer
           src="https://maps.googleapis.com/maps/api/js?key=HERE=initMap&libraries=&v=weekly">
         </script>`
-
+    To set up the coordinates of your place take them from google map and then put them in:
+        `assets/js/main.js -> line 15 -> const uluru = { lat: 39.7219538, lng: -91.5098444 };`
 ## Contributing
 
 Pull requests are welcome on GitHub at https://github.com/makecodework/order.
