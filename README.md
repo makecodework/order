@@ -18,7 +18,7 @@ Welcome to Socket theme! In this directory, you'll find the files you need to be
       footer.html
 
 ### _layouts
-  The main basic file stored here.
+  The main basic file is stored here.
 
     default.html
 
@@ -35,7 +35,7 @@ Welcome to Socket theme! In this directory, you'll find the files you need to be
 
 ## Configuration
 
-  Fill all meta configuration in  `_config.yml`:
+  Fill up all meta configuration in  `_config.yml`:
 
   ```yaml
     title: The title of the website
@@ -47,9 +47,9 @@ Welcome to Socket theme! In this directory, you'll find the files you need to be
 
   All packages are in `package.json`:
 
-    To set up all packages just run the command: `npm i`
+    To set up all packages just run the command in your local console: `npm i`
 
-  To set up a google map need to take a key from Google console. Then put it the tag script below. This tag has to be located on the bottom of `_layouts/default.html` :
+  To set up a google map you need to take a key from the Google console. Then put it in the tag <script> as it is shown below. This tag has to be located on the bottom of `_layouts/default.html` :
 
         `<script async defer
           src="https://maps.googleapis.com/maps/api/js?key=HERE=initMap&libraries=&v=weekly">
