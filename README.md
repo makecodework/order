@@ -47,17 +47,17 @@ Welcome to Socket theme! In this directory, you'll find the files you need to be
 
   All packages are in `package.json`:
 
-    To set up all packages just run the command in your local console: `npm i`
+    To set up all packages just run the command in your local console: npm i
 
   To set up a google map you need to take a key from the Google console. Then put it in the tag <script> as it is shown below. This tag has to be located on the bottom of `_layouts/default.html` :
 
-        `<script async defer
+        <script async defer
           src="https://maps.googleapis.com/maps/api/js?key=HERE=initMap&libraries=&v=weekly">
-        </script>`
+        </script>
 
   To set up the coordinates of your place take them from google map and then put them in:
 
-        `assets/js/main.js -> line 15 -> const uluru = { lat: 39.7219538, lng: -91.5098444 };`
+        assets/js/main.js -> line 15 -> const uluru = { lat: 39.7219538, lng: -91.5098444 };
 
 ## Contributing
 
