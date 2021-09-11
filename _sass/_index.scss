@@ -182,19 +182,19 @@
         color: $main_color__blue;
       }
       &.contact_phone{
-        @include rem(32);
+        //@include rem(32);
+        font-size: calc(26px + 6 * (100vw / 1920));
         line-height: 39px;
         font-weight: 500;
-        /* word-break: break-all; */
+
       }
       &.contact_email {
-        @include rem(24);
+        //@include rem(24);
+        font-size: calc(14px + 10 * (100vw / 1920));
         line-height: 35px;
         width: 262px;
         font-weight: 400;
-
       }
-
     }
   }
 }

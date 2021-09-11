@@ -2,19 +2,6 @@
 
 Welcome to Socket theme! In this directory, you'll find the files you need to be able to use your theme. All layouts in `_layouts`, includes in `_includes`, sass files in `_sass` and any other assets in `assets`.
 
-## Configuration
-
-Fill all meta configuration in  `_config.yml`:
-
-```yaml
-title: The title of the website
-email: Your email here
-description: meta description for SEO
-```
-
-Use gulp if you need in  `gulpfile.js`: `In this file there are gulp tasks`
-
-All packages are in  `package.json`:
 
 ## Structure
 
@@ -45,6 +32,28 @@ All packages are in  `package.json`:
 
     js/
     images/
+
+## Configuration
+
+    Fill all meta configuration in  `_config.yml`:
+
+    ```yaml
+    title: The title of the website
+    email: Your email here
+    description: meta description for SEO
+    ```
+
+    Use gulp if you need in  `gulpfile.js`: `In this file there are gulp tasks`
+
+    All packages are in `package.json`:
+
+      To set up all packages just run the command: `npm i`
+
+    To set up a google map need to take a key from Google console and put it into:
+
+        `<script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=HERE=initMap&libraries=&v=weekly">
+        </script>`
 
 ## Contributing
 

@@ -26,7 +26,8 @@
   opacity: 0.7;
   transition: all 0.1s ease-in-out;
   color: $main_color__text;
-  @include rem(24);
+  //@include rem(24);
+  font-size: calc(20px + 4 * (100vw / 1920));
   line-height: 38px;
 }
 .tabs li.active a {
@@ -44,7 +45,6 @@
 .tabs li a:hover {
   opacity: 1;
   color: $main_color__blue;
-
 }
 
 .tabs-content {

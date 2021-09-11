@@ -64,11 +64,12 @@
     }
   }
   .tabs_block {
-    grid-template-columns: 450px repeat(1, 1fr);
+    /* grid-template-columns: 450px repeat(1, 1fr); */
+    grid-template-columns: calc(373px + 77 * (100vw / 1920)) repeat(1, 1fr);
     grid-column-gap: 35px;
 
     .tabs li a {
-      @include rem(24);
+      /* font-size: calc(20px + 4 * (100vw / 1920)); */
       line-height: 35px;
 
     }
@@ -123,7 +124,6 @@
         a {
           &.contact_email {
             width: auto;
-            word-break: break-word;
           }
 
         }
@@ -148,13 +148,15 @@
     margin-bottom: 94px;
     .promo_text{
       h1 {
-        @include rem(44);
+        //@include rem(44);
+        font-size: calc(21px + 23 * ((100vw - 320px)/1920));
         line-height: 59px;
         margin-top: 15px;
         width: 60%;
       }
       p {
-        @include rem(20);
+        //@include rem(20);
+        font-size: calc(19px + (1+1* 0.7)*((100vw-320px)/1920));
         width: 359px;
       }
     }
@@ -224,7 +226,7 @@
     opacity: 1;
     top: 0;
     line-height: 23px;
-    @include rem(14);
+    @include rem(20);
     padding: 10px 0;
   }
 
@@ -276,8 +278,14 @@
       }
 
       a {
+        &.contact_phone {
+          /* @include rem(32); */
+          font-size: calc(24px + (8 + 8 * .7) * ((100vw - 320px )/ 1920) );
+        }
         &.contact_email {
           width: 100%;
+          //@include rem(24);
+          font-size: calc(15px + (9 + 9 * 0.7) * ((100vw - 320px )/1920));
         }
       }
 
@@ -392,6 +400,9 @@
 
       li{
         margin-right: 30px;
+        a{
+          @include rem(17);
+        }
         &:last-child {
           margin-right: 0;
         }
@@ -567,7 +578,7 @@
 
       }
       p {
-        @include rem(16);
+        @include rem(18);
         line-height: 28px;
       }
     }
@@ -628,7 +639,6 @@
             display: block;
             text-align: center;
            }
-
       }
     }
     .clients{
@@ -668,6 +678,15 @@
     grid-row-gap: 10px;
     .block{
       width: 100%;
+      a {
+        &.contact_phone{
+          @include rem(32);
+        }
+        &.contact_email {
+          @include rem(24);
+        }
+      }
+
     }
   }
   .page_section {
@@ -689,9 +708,7 @@
       line-height: 37px;
 
     }
-    h4 {
 
-    }
   }
   /* Services page */
   section {
@@ -758,7 +775,7 @@
       text-align: center;
     }
   }
-  /* About */
+  /* About page */
   .about_block {
     .img_block {
       margin-bottom: 15px;
@@ -774,9 +791,13 @@
       h3 {
         @include rem(48);
         line-height: 59px;
+        margin-bottom: 40px;
       }
       .question_contet {
         margin-bottom: 70px;
+        &:last-child {
+          margin-bottom: 0;
+        }
         h4 {
           @include rem(28);
           line-height: 40px;
@@ -950,6 +971,15 @@
   }
 
   footer {
+    .nav-footer {
+      ul.menu {
+        li {
+           a {
+             @include rem(15);
+           }
+        }
+      }
+    }
     .copyright{
 
       margin: 52px auto;
