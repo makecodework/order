@@ -35,26 +35,30 @@ Welcome to Socket theme! In this directory, you'll find the files you need to be
 
 ## Configuration
 
-    Fill all meta configuration in  `_config.yml`:
-
+  Fill all meta configuration in  `_config.yml`:
+  
+  ```yaml
     title: The title of the website
     email: Your email here
     description: meta description for SEO
+  ```
 
+  Use gulp if you need in  `gulpfile.js`: `there are gulp tasks in this file`
 
-    Use gulp if you need in  `gulpfile.js`: `there are gulp tasks in this file`
+  All packages are in `package.json`:
 
-    All packages are in `package.json`:
+    To set up all packages just run the command: `npm i`
 
-      To set up all packages just run the command: `npm i`
-
-    To set up a google map need to take a key from Google console and put it into:
+  To set up a google map need to take a key from Google console and put it into:
 
         `<script async defer
           src="https://maps.googleapis.com/maps/api/js?key=HERE=initMap&libraries=&v=weekly">
         </script>`
-    To set up the coordinates of your place take them from google map and then put them in:
+
+  To set up the coordinates of your place take them from google map and then put them in:
+
         `assets/js/main.js -> line 15 -> const uluru = { lat: 39.7219538, lng: -91.5098444 };`
+
 ## Contributing
 
 Pull requests are welcome on GitHub at https://github.com/makecodework/order.
